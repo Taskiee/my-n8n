@@ -3,12 +3,13 @@ services:
     name: n8n
     env: docker
     plan: free
+    region: oregon
     image:
       url: docker.io/n8nio/n8n:latest
     healthCheckPath: /healthz
     envVars:
       - key: N8N_PORT
-        value: 5678
+        value: "5678"
       - key: N8N_PROTOCOL
         value: https
       - key: N8N_ENCRYPTION_KEY
@@ -20,7 +21,7 @@ services:
       - key: DB_POSTGRESDB_HOST
         value: ep-solitary-hat-aqrlk0mt.c-8.us-east-1.aws.neon.tech
       - key: DB_POSTGRESDB_PORT
-        value: 5432
+        value: "5432"
       - key: DB_POSTGRESDB_DATABASE
         value: neondb
       - key: DB_POSTGRESDB_USER
@@ -28,10 +29,10 @@ services:
       - key: DB_POSTGRESDB_PASSWORD
         value: npg_wiNd3bam8eBO
       - key: DB_POSTGRESDB_SSL_ENABLED
-        value: true
+        value: "true"
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
-        value: false
+        value: "false"
       - key: GENERIC_TIMEZONE
         value: Asia/Kolkata
       - key: N8N_HIRING_BANNER_ENABLED
-        value: false
+        value: "false"
